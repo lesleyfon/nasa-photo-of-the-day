@@ -1,12 +1,14 @@
 import React from 'react';
 import NasaLogo from './NasaLogo';
 import Links from './HeaderLinks';
+import Search from './Search';
+import { conditionalExpression } from '@babel/types';
 
 
 
 
 
-const Header = ()=>{
+const Header = (props)=>{
     const headerStyles = {
         width: '100%',
         height: '50px',
@@ -19,10 +21,16 @@ const Header = ()=>{
         alignItems: 'center',
         aligntContent : 'center'
     }
+
     return (
         <div style={headerStyles}>
             <NasaLogo />
             <Links />
+            <Search 
+            setSearchInput = {props.setSearchInput}
+            handleChange = {props.handleChange}
+            searchInput = {props.searchInput}
+            />
         </div>
     )
 }
