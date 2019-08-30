@@ -9,13 +9,12 @@ const HeaderContainer = styled.div`
     display: flex;
     justify-content:space-between;
     align-items: center;
-    alignt-content : center;
+    align-content : center;
 `;
 const Header = (props)=>{
     const headerStyles = {
         width: '100%',
         height: '50px',
-
     }
 
     return (

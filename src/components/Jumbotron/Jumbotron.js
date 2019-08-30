@@ -3,6 +3,10 @@ import styled from 'styled-components';
 const JumbotronStyles = styled.div`
     width: 980px;
     margin: 0 auto;
+    .buttons{
+        display flex;
+        justify-content: space-between
+    }
 `;
 const Jumbotron= (props)=>{
     const imageStyles = {
@@ -18,6 +22,10 @@ const Jumbotron= (props)=>{
         <JumbotronStyles>
             <div>
                 <img src = {props.apod.url} style={imageStyles} />
+            </div>
+            <div className='buttons'>
+                <button>Prev</button>
+                <button>Next</button>
             </div>
             <div style = {pStyles}>
                 <p>{props.apod.explanation}</p>
