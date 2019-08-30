@@ -19,12 +19,10 @@ const SearchInfo = props =>{
                <h2>{props.searchInfo[0].title}</h2> 
                 {
                     toggleMore ? 
-                    <a className='someMore' onClick={(e)=>{setToggleMore(!toggleMore) }} >Less</a> :
-                    <a className='someMore' onClick={(e)=>{setToggleMore(!toggleMore) }}>More</a>
+                    <a className='someMore' onClick={()=>{setToggleMore(!toggleMore) }} >Less</a> :
+                    <a className='someMore' onClick={()=>{setToggleMore(!toggleMore) }}>More</a>
                         
                 }
-               {/* <a className='someMore' onClick={(e)=>{setToggleMore(!toggleMore) 
-                console.log(e)}} >More</a> */}
                {
                    toggleMore ?
                     <More 

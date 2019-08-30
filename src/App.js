@@ -6,6 +6,7 @@ import key from './key'
 import Header from './components/Header/Header'
 import Jumbotron from "./components/Jumbotron/Jumbotron";
 import Cards from "./components/SearchCards/Cards";
+import { constants } from "crypto";
 
 function App() {
   const [apod, setApod] = useState([])
@@ -24,24 +25,26 @@ function App() {
   }, [])
   //Use effect for Search 
   useEffect(()=>{
+    console.log(searchInput)
     axios.get(`https://images-api.nasa.gov/search?q=${searchInput}`)
     .then(res=>{
       if(searchResults === undefined){
         return;
-      } else if(searchResults.length <= 5){
+      } else if(searchResults.length <= 6){
         setSearchResult(res.data.collection.items.splice(0, 6))
+        console.log(searchResults)
       } else{
         return;
       }
     })
     .catch(err=>{
-      console.log("Error: ". err)
+      console.log("Error: ", err)
     })
- 
+
   }, [searchInput]);
 
   // handlging Search 
-  const handleChange = e=>{
+  const handleChange = e =>{
       setSearchInput(e.target.value);
   }
 

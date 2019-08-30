@@ -1,6 +1,5 @@
 import React from 'react';
 import NasaLogo from './NasaLogo';
-import Links from './HeaderLinks';
 import Search from './Search';
 import { conditionalExpression } from '@babel/types';
 
@@ -20,12 +19,12 @@ const Header = (props)=>{
         justifyContent:'space-between',
         alignItems: 'center',
         aligntContent : 'center'
+
     }
 
     return (
         <div style={headerStyles}>
             <NasaLogo />
-            <Links />
             <Search 
             setSearchInput = {props.setSearchInput}
             handleChange = {props.handleChange}
