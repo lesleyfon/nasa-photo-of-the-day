@@ -2,8 +2,7 @@ import React from 'react';
 import logo from './../../img/logo2.jpg';
 const NasaLogo = ()=>{
     const nasaLogoStyles= {
-        width: '15%',
-        marginLeft: '200px'
+        width: '25%',
     }
     return(
         <>
