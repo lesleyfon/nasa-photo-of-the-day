@@ -7,8 +7,15 @@ const CardsDiv= props =>{
    
     const eachCard = {
         width:'40%',
+        border: '1px solid lightgrey',
+        borderRadius: '5px',
+        backgroundColor: 'white',
+        position: 'relative',
+        overflow: 'hidden',
+        boxShadow: '2px 2px 2px lightgrey',
+        marginBottom: '20px',
+
     }
-    // console.log(props)
     return (
         <>
             {props.searchResult.map((item, i)=>{

@@ -29,7 +29,7 @@ function App() {
       if(searchResults === undefined){
         return;
       } else if(searchResults.length <= 5){
-        setSearchResult(res.data.collection.items.splice(0, 5))
+        setSearchResult(res.data.collection.items.splice(0, 6))
       } else{
         return;
       }
