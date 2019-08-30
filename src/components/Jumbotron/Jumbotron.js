@@ -1,25 +1,28 @@
 import React from 'react';
-
+import styled from 'styled-components';
+const JumbotronStyles = styled.div`
+    width: 980px;
+    margin: 0 auto;
+`;
 const Jumbotron= (props)=>{
-    const jumbotronStyles = {
-        width: '1280px',
-        height: '768px',
+    const imageStyles = {
+        width: '100%',
+        height: '668px',
         marginTop: '5px',
-
     }
     const pStyles = {
         background: '#ffffff',
      
     }
     return(
-        <div>
+        <JumbotronStyles>
             <div>
-                <img src = {props.apod.url} style={jumbotronStyles} />
+                <img src = {props.apod.url} style={imageStyles} />
             </div>
             <div style = {pStyles}>
                 <p>{props.apod.explanation}</p>
             </div>
-        </div>
+        </JumbotronStyles>
     )
 }
 
